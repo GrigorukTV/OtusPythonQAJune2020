@@ -1,5 +1,8 @@
 class Figure:
     angles = None
+    name = None
+    area = None
+    perimeter = None
 
     def __init__(self, name, area, perimeter):
         self.name = name
