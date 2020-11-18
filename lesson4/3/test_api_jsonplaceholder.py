@@ -4,7 +4,7 @@ import pytest
 def test_api_post_one(api_client):
     res = api_client.post(
         path = "/comments",
-        data = {'postId': 77, 'name': 'vero', 'email': 'test@mail.ru', 'body': 'harum'}
+        data = {'postId': 77, 'name': 'vero', 'email': 'tests@mail.ru', 'body': 'harum'}
     )
     assert res.json()['name'] == 'vero'
 
@@ -12,9 +12,9 @@ def test_api_post_one(api_client):
 def test_api_put_two(api_client):
     res = api_client.put(
         path = "/comments/67",
-        data = {'email': 'test@mail.ru'}
+        data = {'email': 'tests@mail.ru'}
     )
-    assert res.json()['email'] == 'test@mail.ru'
+    assert res.json()['email'] == 'tests@mail.ru'
 
 # проверка на удаление данных
 def test_api_delete_three(api_client):
